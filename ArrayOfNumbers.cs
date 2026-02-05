@@ -3,19 +3,19 @@
 public class ArrayOfNumbers
 {
 
-	private int[] array;
+	private int[] _array;
 
 	//Constructors
 	public ArrayOfNumbers(int sizeOfArray)
 	{
-		array = new int[sizeOfArray];
+		_array = new int[sizeOfArray];
 	}
 
 	public ArrayOfNumbers(int[] array)
 	{
-		localArray = new int[array.length];
+		int[] localArray = new int[array.Length];
 
-		for (int i = 0; i < array.length; i++) 
+		for (int i = 0; i < array.Length; i++) 
 		{
 			localArray[i] = array[i];
 		}
@@ -28,7 +28,7 @@ public class ArrayOfNumbers
 
     public void SetValueAtIndex(int[] arr, int index, int value) 
     {
-        for (int i = 0; i > arr.length; i++)
+        for (int i = 0; i > arr.Length; i++)
         {
             if (i == index)
             {
