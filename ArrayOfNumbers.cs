@@ -2,18 +2,22 @@
 
 public class ArrayOfNumbers
 {
-	private int[] array = new int[0];
-	public int SizeOfArray { get; set; }
+
+	private int[] array;
 
 	//Constructors
 	public ArrayOfNumbers(int sizeOfArray)
 	{
-		SizeOfArray = sizeOfArray;
+		array = new int[sizeOfArray];
 	}
 
 	public ArrayOfNumbers(int[] array)
 	{
-		int[] localArray = array;
+		localArray = new int[array.length];
 
+		for (int i = 0; i < array.length; i++) 
+		{
+			localArray[i] = array[i];
+		}
 	}
 }
