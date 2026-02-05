@@ -20,4 +20,12 @@ public class ArrayOfNumbers
 			localArray[i] = array[i];
 		}
 	}
+
+    public int FindValueAtIndex(int[] arr, int index)
+    {
+        return arr[index];
+    }
+
+
+
 }
