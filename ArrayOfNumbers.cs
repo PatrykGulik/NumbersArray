@@ -29,14 +29,12 @@ public class ArrayOfNumbers
 
     public void SetValueAtIndex(int[] arr, int index, int value) 
     {
-        for (int i = 0; i > arr.Length; i++)
+        if (index < 0 || index > arr.Length)
         {
-            if (i == index)
-            {
-                arr[i] = value;
-            }
+            throw new IndexOutOfRangeException("Out of range - choose another index number");
         }
-    }
 
+        arr[index] = value;
+    }
 
 }
