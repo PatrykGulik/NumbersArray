@@ -30,19 +30,27 @@
         {
             label1 = new Label();
             label2 = new Label();
-            Txt_ArraySize = new TextBox();
             Btn_ArraySize = new Button();
-            Lbl_ArraySize = new Label();
             Lbl_EnterArray = new Label();
             Btn_AddInt = new Button();
             groupBox1 = new GroupBox();
+            Lbl_ArraySize = new Label();
             groupBox2 = new GroupBox();
+            Lbl_ArrayElements = new Label();
             Txt_AddInt = new TextBox();
             label3 = new Label();
             Txt_AddIndex = new TextBox();
-            Lbl_ArrayElements = new Label();
+            groupBox3 = new GroupBox();
+            label5 = new Label();
+            Lbl_Array = new Label();
+            Btn_AddArray = new Button();
+            Txt_AddArray = new TextBox();
+            label4 = new Label();
+            label6 = new Label();
+            Txt_Index = new TextBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
+            groupBox3.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -57,42 +65,26 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(6, 27);
+            label2.Location = new Point(11, 60);
             label2.Name = "label2";
-            label2.Size = new Size(56, 15);
+            label2.Size = new Size(35, 15);
             label2.TabIndex = 1;
-            label2.Text = "Enter size";
-            // 
-            // Txt_ArraySize
-            // 
-            Txt_ArraySize.Location = new Point(68, 24);
-            Txt_ArraySize.Name = "Txt_ArraySize";
-            Txt_ArraySize.Size = new Size(100, 23);
-            Txt_ArraySize.TabIndex = 2;
+            label2.Text = "Value";
             // 
             // Btn_ArraySize
             // 
-            Btn_ArraySize.Location = new Point(6, 53);
+            Btn_ArraySize.Location = new Point(6, 86);
             Btn_ArraySize.Name = "Btn_ArraySize";
             Btn_ArraySize.Size = new Size(75, 23);
             Btn_ArraySize.TabIndex = 3;
-            Btn_ArraySize.Text = "Enter";
+            Btn_ArraySize.Text = "Show";
             Btn_ArraySize.UseVisualStyleBackColor = true;
             Btn_ArraySize.Click += Btn_ArraySize_Click;
-            // 
-            // Lbl_ArraySize
-            // 
-            Lbl_ArraySize.AutoSize = true;
-            Lbl_ArraySize.Location = new Point(6, 19);
-            Lbl_ArraySize.Name = "Lbl_ArraySize";
-            Lbl_ArraySize.Size = new Size(109, 15);
-            Lbl_ArraySize.TabIndex = 4;
-            Lbl_ArraySize.Text = "The size of array is: ";
             // 
             // Lbl_EnterArray
             // 
             Lbl_EnterArray.AutoSize = true;
-            Lbl_EnterArray.Location = new Point(6, 49);
+            Lbl_EnterArray.Location = new Point(6, 25);
             Lbl_EnterArray.Name = "Lbl_EnterArray";
             Lbl_EnterArray.Size = new Size(65, 15);
             Lbl_EnterArray.TabIndex = 5;
@@ -100,7 +92,7 @@
             // 
             // Btn_AddInt
             // 
-            Btn_AddInt.Location = new Point(119, 153);
+            Btn_AddInt.Location = new Point(6, 111);
             Btn_AddInt.Name = "Btn_AddInt";
             Btn_AddInt.Size = new Size(75, 23);
             Btn_AddInt.TabIndex = 7;
@@ -110,15 +102,26 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(Txt_Index);
+            groupBox1.Controls.Add(label6);
+            groupBox1.Controls.Add(Lbl_ArraySize);
             groupBox1.Controls.Add(Btn_ArraySize);
             groupBox1.Controls.Add(label2);
-            groupBox1.Controls.Add(Txt_ArraySize);
-            groupBox1.Location = new Point(40, 51);
+            groupBox1.Location = new Point(40, 203);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(181, 89);
+            groupBox1.Size = new Size(181, 126);
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Array Size";
+            groupBox1.Text = "Array Index Value";
+            // 
+            // Lbl_ArraySize
+            // 
+            Lbl_ArraySize.AutoSize = true;
+            Lbl_ArraySize.Location = new Point(63, 60);
+            Lbl_ArraySize.Name = "Lbl_ArraySize";
+            Lbl_ArraySize.Size = new Size(38, 15);
+            Lbl_ArraySize.TabIndex = 4;
+            Lbl_ArraySize.Text = "label6";
             // 
             // groupBox2
             // 
@@ -126,19 +129,27 @@
             groupBox2.Controls.Add(Txt_AddInt);
             groupBox2.Controls.Add(label3);
             groupBox2.Controls.Add(Txt_AddIndex);
-            groupBox2.Controls.Add(Lbl_ArraySize);
             groupBox2.Controls.Add(Btn_AddInt);
             groupBox2.Controls.Add(Lbl_EnterArray);
-            groupBox2.Location = new Point(40, 167);
+            groupBox2.Location = new Point(277, 50);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(200, 226);
+            groupBox2.Size = new Size(200, 140);
             groupBox2.TabIndex = 9;
             groupBox2.TabStop = false;
             groupBox2.Text = "Add Number";
             // 
+            // Lbl_ArrayElements
+            // 
+            Lbl_ArrayElements.AutoSize = true;
+            Lbl_ArrayElements.Location = new Point(6, 84);
+            Lbl_ArrayElements.Name = "Lbl_ArrayElements";
+            Lbl_ArrayElements.Size = new Size(38, 15);
+            Lbl_ArrayElements.TabIndex = 10;
+            Lbl_ArrayElements.Text = "label4";
+            // 
             // Txt_AddInt
             // 
-            Txt_AddInt.Location = new Point(100, 102);
+            Txt_AddInt.Location = new Point(100, 51);
             Txt_AddInt.Name = "Txt_AddInt";
             Txt_AddInt.Size = new Size(94, 23);
             Txt_AddInt.TabIndex = 8;
@@ -146,7 +157,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(6, 105);
+            label3.Location = new Point(6, 54);
             label3.Name = "label3";
             label3.Size = new Size(88, 15);
             label3.TabIndex = 9;
@@ -154,25 +165,91 @@
             // 
             // Txt_AddIndex
             // 
-            Txt_AddIndex.Location = new Point(100, 46);
+            Txt_AddIndex.Location = new Point(100, 22);
             Txt_AddIndex.Name = "Txt_AddIndex";
             Txt_AddIndex.Size = new Size(94, 23);
             Txt_AddIndex.TabIndex = 0;
             // 
-            // Lbl_ArrayElements
+            // groupBox3
             // 
-            Lbl_ArrayElements.AutoSize = true;
-            Lbl_ArrayElements.Location = new Point(12, 195);
-            Lbl_ArrayElements.Name = "Lbl_ArrayElements";
-            Lbl_ArrayElements.Size = new Size(38, 15);
-            Lbl_ArrayElements.TabIndex = 10;
-            Lbl_ArrayElements.Text = "label4";
+            groupBox3.Controls.Add(label5);
+            groupBox3.Controls.Add(Lbl_Array);
+            groupBox3.Controls.Add(Btn_AddArray);
+            groupBox3.Controls.Add(Txt_AddArray);
+            groupBox3.Controls.Add(label4);
+            groupBox3.Location = new Point(40, 50);
+            groupBox3.Name = "groupBox3";
+            groupBox3.Size = new Size(200, 140);
+            groupBox3.TabIndex = 10;
+            groupBox3.TabStop = false;
+            groupBox3.Text = "Array Elements";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(6, 93);
+            label5.Name = "label5";
+            label5.Size = new Size(78, 15);
+            label5.TabIndex = 12;
+            label5.Text = "Original array";
+            // 
+            // Lbl_Array
+            // 
+            Lbl_Array.AutoSize = true;
+            Lbl_Array.Location = new Point(6, 115);
+            Lbl_Array.Name = "Lbl_Array";
+            Lbl_Array.Size = new Size(38, 15);
+            Lbl_Array.TabIndex = 11;
+            Lbl_Array.Text = "label5";
+            // 
+            // Btn_AddArray
+            // 
+            Btn_AddArray.Location = new Point(6, 59);
+            Btn_AddArray.Name = "Btn_AddArray";
+            Btn_AddArray.Size = new Size(75, 23);
+            Btn_AddArray.TabIndex = 2;
+            Btn_AddArray.Text = "Enter";
+            Btn_AddArray.UseVisualStyleBackColor = true;
+            Btn_AddArray.Click += Btn_AddArray_Click_1;
+            // 
+            // Txt_AddArray
+            // 
+            Txt_AddArray.Location = new Point(94, 27);
+            Txt_AddArray.Name = "Txt_AddArray";
+            Txt_AddArray.Size = new Size(100, 23);
+            Txt_AddArray.TabIndex = 1;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(6, 30);
+            label4.Name = "label4";
+            label4.Size = new Size(63, 15);
+            label4.TabIndex = 0;
+            label4.Text = "Enter array";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(11, 28);
+            label6.Name = "label6";
+            label6.Size = new Size(35, 15);
+            label6.TabIndex = 5;
+            label6.Text = "Index";
+            // 
+            // Txt_Index
+            // 
+            Txt_Index.Location = new Point(52, 25);
+            Txt_Index.Name = "Txt_Index";
+            Txt_Index.Size = new Size(100, 23);
+            Txt_Index.TabIndex = 6;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
             Controls.Add(label1);
@@ -182,6 +259,8 @@
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
             groupBox2.PerformLayout();
+            groupBox3.ResumeLayout(false);
+            groupBox3.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -190,9 +269,7 @@
 
         private Label label1;
         private Label label2;
-        private TextBox Txt_ArraySize;
         private Button Btn_ArraySize;
-        private Label Lbl_ArraySize;
         private Label Lbl_EnterArray;
         private ListBox ListBox_AddInt;
         private Button Btn_AddInt;
@@ -202,5 +279,14 @@
         private TextBox Txt_AddInt;
         private Label label3;
         private Label Lbl_ArrayElements;
+        private GroupBox groupBox3;
+        private Button Btn_AddArray;
+        private TextBox Txt_AddArray;
+        private Label label4;
+        private Label Lbl_Array;
+        private Label label5;
+        private Label Lbl_ArraySize;
+        private TextBox Txt_Index;
+        private Label label6;
     }
 }

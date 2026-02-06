@@ -1,3 +1,5 @@
+using System;
+
 namespace NumbersArray
 {
     public partial class Form1 : Form
@@ -8,6 +10,7 @@ namespace NumbersArray
         private int arraySize;
 
         private int arrayIndex;
+        private int index;
 
         private int arrayValue;
 
@@ -19,10 +22,16 @@ namespace NumbersArray
 
         private void Btn_ArraySize_Click(object sender, EventArgs e)
         {
-            int.TryParse(Txt_ArraySize.Text, out arraySize);
-            arrayOfNumbers = new ArrayOfNumbers(arraySize);
-            Lbl_ArraySize.Text = $"The size of array is: {arrayOfNumbers.Array.Length.ToString()}";
-            
+            int.TryParse(Txt_Index.Text, out index);
+            Lbl_ArraySize.Text = arrayOfNumbers.FindValueAtIndex(index).ToString();
+
+        }
+        private void Btn_AddArray_Click_1(object sender, EventArgs e)
+        {
+            string input = Txt_AddArray.Text;
+            int[] numbers = ParseInputToArray(input);
+            arrayOfNumbers = new ArrayOfNumbers(numbers);
+            Lbl_Array.Text = string.Join(" ", arrayOfNumbers.Array);
         }
 
         private void Btn_AddInt_Click(object sender, EventArgs e)
@@ -30,9 +39,24 @@ namespace NumbersArray
 
             int.TryParse(Txt_AddIndex.Text, out arrayIndex);
             int.TryParse(Txt_AddInt.Text, out arrayValue);
-            arrayOfNumbers.SetValueAtIndex(arrayOfNumbers.Array, arrayIndex, arrayValue);
+            arrayOfNumbers.SetValueAtIndex(arrayIndex, arrayValue);
             Lbl_ArrayElements.Text = string.Join(" ", arrayOfNumbers.Array);
 
+        }
+
+        public int[] ParseInputToArray(string input)
+        {
+            string[] parts = input.Split(' ');
+            List<int> numbers = new List<int>();
+
+            foreach (string part in parts) 
+            { 
+                 if (!string.IsNullOrWhiteSpace(part))
+                 {
+                        numbers.Add(int.Parse(part));
+                 }
+            }
+            return numbers.ToArray();
         }
     }
 }

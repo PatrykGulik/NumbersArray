@@ -3,38 +3,47 @@
 public class ArrayOfNumbers
 {
 
-    public int[] Array {get; set;}
+    private int[] _array;
 
+    public int[] Array
+    {
+        get { return _array; }
+    }
+
+    public int ArraySize
+    {
+        get { return _array.Length; }
+    }
 
 	//Constructors
 	public ArrayOfNumbers(int sizeOfArray)
 	{
-        Array = new int[sizeOfArray];
+        _array = new int[sizeOfArray];
 	}
 
 	public ArrayOfNumbers(int[] array)
 	{
-		int[] localArray = new int[array.Length];
+		_array = new int[array.Length];
 
 		for (int i = 0; i < array.Length; i++) 
 		{
-			localArray[i] = array[i];
+            _array[i] = array[i];
 		}
 	}
 
-    public int FindValueAtIndex(int[] arr, int index)
+    public int FindValueAtIndex(int index)
     {
-        return arr[index];
+        return _array[index];
     }
 
-    public void SetValueAtIndex(int[] arr, int index, int value) 
+    public void SetValueAtIndex(int index, int value) 
     {
-        if (index < 0 || index > arr.Length)
+        if (index < 0 || index > _array.Length)
         {
             throw new IndexOutOfRangeException("Out of range - choose another index number");
         }
 
-        arr[index] = value;
+        _array[index] = value;
     }
 
 }
