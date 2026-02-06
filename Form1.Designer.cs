@@ -49,12 +49,16 @@
             Txt_AddArray = new TextBox();
             label4 = new Label();
             groupBox4 = new GroupBox();
-            button1 = new Button();
             Lbl_FindMax = new Label();
+            button1 = new Button();
+            groupBox5 = new GroupBox();
+            Lbl_CountElements = new Label();
+            Btn_CountElements = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox4.SuspendLayout();
+            groupBox5.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -259,6 +263,15 @@
             groupBox4.TabStop = false;
             groupBox4.Text = "Highest Value";
             // 
+            // Lbl_FindMax
+            // 
+            Lbl_FindMax.AutoSize = true;
+            Lbl_FindMax.Location = new Point(103, 29);
+            Lbl_FindMax.Name = "Lbl_FindMax";
+            Lbl_FindMax.Size = new Size(38, 15);
+            Lbl_FindMax.TabIndex = 1;
+            Lbl_FindMax.Text = "label7";
+            // 
             // button1
             // 
             button1.Location = new Point(6, 25);
@@ -269,20 +282,42 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // Lbl_FindMax
+            // groupBox5
             // 
-            Lbl_FindMax.AutoSize = true;
-            Lbl_FindMax.Location = new Point(103, 29);
-            Lbl_FindMax.Name = "Lbl_FindMax";
-            Lbl_FindMax.Size = new Size(38, 15);
-            Lbl_FindMax.TabIndex = 1;
-            Lbl_FindMax.Text = "label7";
+            groupBox5.Controls.Add(Lbl_CountElements);
+            groupBox5.Controls.Add(Btn_CountElements);
+            groupBox5.Location = new Point(251, 289);
+            groupBox5.Name = "groupBox5";
+            groupBox5.Size = new Size(155, 57);
+            groupBox5.TabIndex = 12;
+            groupBox5.TabStop = false;
+            groupBox5.Text = "Number of Elements";
+            // 
+            // Lbl_CountElements
+            // 
+            Lbl_CountElements.AutoSize = true;
+            Lbl_CountElements.Location = new Point(103, 29);
+            Lbl_CountElements.Name = "Lbl_CountElements";
+            Lbl_CountElements.Size = new Size(38, 15);
+            Lbl_CountElements.TabIndex = 1;
+            Lbl_CountElements.Text = "label7";
+            // 
+            // Btn_CountElements
+            // 
+            Btn_CountElements.Location = new Point(6, 25);
+            Btn_CountElements.Name = "Btn_CountElements";
+            Btn_CountElements.Size = new Size(75, 23);
+            Btn_CountElements.TabIndex = 0;
+            Btn_CountElements.Text = "Find";
+            Btn_CountElements.UseVisualStyleBackColor = true;
+            Btn_CountElements.Click += Btn_CountElements_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(groupBox5);
             Controls.Add(groupBox4);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
@@ -298,6 +333,8 @@
             groupBox3.PerformLayout();
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
+            groupBox5.ResumeLayout(false);
+            groupBox5.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -328,5 +365,8 @@
         private GroupBox groupBox4;
         private Label Lbl_FindMax;
         private Button button1;
+        private GroupBox groupBox5;
+        private Label Lbl_CountElements;
+        private Button Btn_CountElements;
     }
 }

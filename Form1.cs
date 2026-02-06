@@ -63,6 +63,11 @@ namespace NumbersArray
         {
             Lbl_FindMax.Text = arrayOfNumbers.FindMax().ToString();
         }
+
+        private void Btn_CountElements_Click(object sender, EventArgs e)
+        {
+            Lbl_CountElements.Text = arrayOfNumbers.ArraySize.ToString();
+        }
     }
 }
 
