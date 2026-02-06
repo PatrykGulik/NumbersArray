@@ -60,4 +60,18 @@ public class ArrayOfNumbers
     {
         return SumArray() / _array.Length;
     }
+
+    public bool Equal(int index1, int index2)
+    {
+        bool result = false;
+        if (_array[index1] == _array[index2])
+        {
+            result = true;
+        }
+        else
+        {
+            result = false;
+        }
+        return result;
+    }
 }

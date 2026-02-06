@@ -60,6 +60,13 @@
             groupBox7 = new GroupBox();
             Lbl_Avg = new Label();
             Btn_Avg = new Button();
+            groupBox8 = new GroupBox();
+            Txt_EqualIndex2 = new TextBox();
+            label7 = new Label();
+            Lbl_Equal = new Label();
+            Txt_EqualIndex1 = new TextBox();
+            Btn_Equal = new Button();
+            label9 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -67,6 +74,7 @@
             groupBox5.SuspendLayout();
             groupBox6.SuspendLayout();
             groupBox7.SuspendLayout();
+            groupBox8.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -380,11 +388,78 @@
             Btn_Avg.UseVisualStyleBackColor = true;
             Btn_Avg.Click += Btn_Avg_Click;
             // 
+            // groupBox8
+            // 
+            groupBox8.Controls.Add(Txt_EqualIndex2);
+            groupBox8.Controls.Add(label7);
+            groupBox8.Controls.Add(Lbl_Equal);
+            groupBox8.Controls.Add(Txt_EqualIndex1);
+            groupBox8.Controls.Add(Btn_Equal);
+            groupBox8.Controls.Add(label9);
+            groupBox8.Location = new Point(531, 50);
+            groupBox8.Name = "groupBox8";
+            groupBox8.Size = new Size(200, 108);
+            groupBox8.TabIndex = 11;
+            groupBox8.TabStop = false;
+            groupBox8.Text = "Check Equal Numbers";
+            // 
+            // Txt_EqualIndex2
+            // 
+            Txt_EqualIndex2.Location = new Point(100, 51);
+            Txt_EqualIndex2.Name = "Txt_EqualIndex2";
+            Txt_EqualIndex2.Size = new Size(94, 23);
+            Txt_EqualIndex2.TabIndex = 11;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(6, 54);
+            label7.Name = "label7";
+            label7.Size = new Size(74, 15);
+            label7.TabIndex = 12;
+            label7.Text = "Enter Index 2";
+            // 
+            // Lbl_Equal
+            // 
+            Lbl_Equal.AutoSize = true;
+            Lbl_Equal.Location = new Point(87, 84);
+            Lbl_Equal.Name = "Lbl_Equal";
+            Lbl_Equal.Size = new Size(38, 15);
+            Lbl_Equal.TabIndex = 10;
+            Lbl_Equal.Text = "label4";
+            // 
+            // Txt_EqualIndex1
+            // 
+            Txt_EqualIndex1.Location = new Point(100, 22);
+            Txt_EqualIndex1.Name = "Txt_EqualIndex1";
+            Txt_EqualIndex1.Size = new Size(94, 23);
+            Txt_EqualIndex1.TabIndex = 0;
+            // 
+            // Btn_Equal
+            // 
+            Btn_Equal.Location = new Point(6, 80);
+            Btn_Equal.Name = "Btn_Equal";
+            Btn_Equal.Size = new Size(75, 23);
+            Btn_Equal.TabIndex = 7;
+            Btn_Equal.Text = "Check";
+            Btn_Equal.UseVisualStyleBackColor = true;
+            Btn_Equal.Click += Btn_Equal_Click;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(6, 25);
+            label9.Name = "label9";
+            label9.Size = new Size(74, 15);
+            label9.TabIndex = 5;
+            label9.Text = "Enter Index 1";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(groupBox8);
             Controls.Add(groupBox7);
             Controls.Add(groupBox6);
             Controls.Add(groupBox5);
@@ -409,6 +484,8 @@
             groupBox6.PerformLayout();
             groupBox7.ResumeLayout(false);
             groupBox7.PerformLayout();
+            groupBox8.ResumeLayout(false);
+            groupBox8.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -448,5 +525,12 @@
         private GroupBox groupBox7;
         private Label Lbl_Avg;
         private Button Btn_Avg;
+        private GroupBox groupBox8;
+        private Label Lbl_Equal;
+        private TextBox Txt_EqualIndex1;
+        private Button Btn_Equal;
+        private Label label9;
+        private TextBox Txt_EqualIndex2;
+        private Label label7;
     }
 }

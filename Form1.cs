@@ -12,6 +12,9 @@ namespace NumbersArray
         private int arrayIndex;
         private int index;
 
+        private int intpuEqualIndex1;
+        private int intpuEqualIndex2;
+
         private int arrayValue;
 
 
@@ -77,6 +80,14 @@ namespace NumbersArray
         private void Btn_Avg_Click(object sender, EventArgs e)
         {
             Lbl_Avg.Text = arrayOfNumbers.AvgArray().ToString();
+        }
+
+        private void Btn_Equal_Click(object sender, EventArgs e)
+        {
+            int.TryParse(Txt_EqualIndex1.Text, out intpuEqualIndex1);
+            int.TryParse(Txt_EqualIndex2.Text, out intpuEqualIndex2);
+
+            Lbl_Equal.Text = arrayOfNumbers.Equal(intpuEqualIndex1, intpuEqualIndex2).ToString();
         }
     }
 }
