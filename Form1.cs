@@ -12,8 +12,11 @@ namespace NumbersArray
         private int arrayIndex;
         private int index;
 
-        private int intpuEqualIndex1;
-        private int intpuEqualIndex2;
+        private int inputEqualIndex1;
+        private int inputEqualIndex2;
+
+        private int inputGCDIndex1;
+        private int inputGCDIndex2;
 
         private int arrayValue;
 
@@ -84,10 +87,18 @@ namespace NumbersArray
 
         private void Btn_Equal_Click(object sender, EventArgs e)
         {
-            int.TryParse(Txt_EqualIndex1.Text, out intpuEqualIndex1);
-            int.TryParse(Txt_EqualIndex2.Text, out intpuEqualIndex2);
+            int.TryParse(Txt_EqualIndex1.Text, out inputEqualIndex1);
+            int.TryParse(Txt_EqualIndex2.Text, out inputEqualIndex2);
 
-            Lbl_Equal.Text = arrayOfNumbers.Equal(intpuEqualIndex1, intpuEqualIndex2).ToString();
+            Lbl_Equal.Text = arrayOfNumbers.Equal(inputEqualIndex1, inputEqualIndex2).ToString();
+        }
+
+        private void Btn_GCD_Click(object sender, EventArgs e)
+        {
+            int.TryParse(Txt_GCD1.Text, out inputGCDIndex1);
+            int.TryParse(Txt_GCD2.Text, out inputGCDIndex2);
+
+            Lbl_GCD.Text = arrayOfNumbers.EuclidAlgorithm(inputGCDIndex1, inputGCDIndex2).ToString();
         }
     }
 }

@@ -74,4 +74,17 @@ public class ArrayOfNumbers
         }
         return result;
     }
+
+    public int EuclidAlgorithm(int a, int b)
+    {
+        a = _array[a]; b = _array[b];
+
+        while (a != b) // Continue while a is not equal to b - if a and b are equal, then a must be the GCD
+        {
+            if (a > b) 
+                a = a - b; // If a is greater than b, then a becomes result of a - b
+            else
+                b = b - a; // If b is greater than a, then b becomes result of b - a
+        }return a;
+    }
 }

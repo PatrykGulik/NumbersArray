@@ -67,6 +67,13 @@
             Txt_EqualIndex1 = new TextBox();
             Btn_Equal = new Button();
             label9 = new Label();
+            groupBox9 = new GroupBox();
+            Txt_GCD2 = new TextBox();
+            label8 = new Label();
+            Lbl_GCD = new Label();
+            Txt_GCD1 = new TextBox();
+            Btn_GCD = new Button();
+            label11 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -75,6 +82,7 @@
             groupBox6.SuspendLayout();
             groupBox7.SuspendLayout();
             groupBox8.SuspendLayout();
+            groupBox9.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -454,11 +462,78 @@
             label9.TabIndex = 5;
             label9.Text = "Enter Index 1";
             // 
+            // groupBox9
+            // 
+            groupBox9.Controls.Add(Txt_GCD2);
+            groupBox9.Controls.Add(label8);
+            groupBox9.Controls.Add(Lbl_GCD);
+            groupBox9.Controls.Add(Txt_GCD1);
+            groupBox9.Controls.Add(Btn_GCD);
+            groupBox9.Controls.Add(label11);
+            groupBox9.Location = new Point(531, 170);
+            groupBox9.Name = "groupBox9";
+            groupBox9.Size = new Size(200, 108);
+            groupBox9.TabIndex = 13;
+            groupBox9.TabStop = false;
+            groupBox9.Text = "Greatest Common Divisor";
+            // 
+            // Txt_GCD2
+            // 
+            Txt_GCD2.Location = new Point(100, 51);
+            Txt_GCD2.Name = "Txt_GCD2";
+            Txt_GCD2.Size = new Size(94, 23);
+            Txt_GCD2.TabIndex = 11;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(6, 54);
+            label8.Name = "label8";
+            label8.Size = new Size(74, 15);
+            label8.TabIndex = 12;
+            label8.Text = "Enter Index 2";
+            // 
+            // Lbl_GCD
+            // 
+            Lbl_GCD.AutoSize = true;
+            Lbl_GCD.Location = new Point(87, 84);
+            Lbl_GCD.Name = "Lbl_GCD";
+            Lbl_GCD.Size = new Size(38, 15);
+            Lbl_GCD.TabIndex = 10;
+            Lbl_GCD.Text = "label4";
+            // 
+            // Txt_GCD1
+            // 
+            Txt_GCD1.Location = new Point(100, 22);
+            Txt_GCD1.Name = "Txt_GCD1";
+            Txt_GCD1.Size = new Size(94, 23);
+            Txt_GCD1.TabIndex = 0;
+            // 
+            // Btn_GCD
+            // 
+            Btn_GCD.Location = new Point(6, 80);
+            Btn_GCD.Name = "Btn_GCD";
+            Btn_GCD.Size = new Size(75, 23);
+            Btn_GCD.TabIndex = 7;
+            Btn_GCD.Text = "Find";
+            Btn_GCD.UseVisualStyleBackColor = true;
+            Btn_GCD.Click += Btn_GCD_Click;
+            // 
+            // label11
+            // 
+            label11.AutoSize = true;
+            label11.Location = new Point(6, 25);
+            label11.Name = "label11";
+            label11.Size = new Size(74, 15);
+            label11.TabIndex = 5;
+            label11.Text = "Enter Index 1";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(groupBox9);
             Controls.Add(groupBox8);
             Controls.Add(groupBox7);
             Controls.Add(groupBox6);
@@ -486,6 +561,8 @@
             groupBox7.PerformLayout();
             groupBox8.ResumeLayout(false);
             groupBox8.PerformLayout();
+            groupBox9.ResumeLayout(false);
+            groupBox9.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -532,5 +609,12 @@
         private Label label9;
         private TextBox Txt_EqualIndex2;
         private Label label7;
+        private GroupBox groupBox9;
+        private TextBox Txt_GCD2;
+        private Label label8;
+        private Label Lbl_GCD;
+        private TextBox Txt_GCD1;
+        private Button Btn_GCD;
+        private Label label11;
     }
 }
