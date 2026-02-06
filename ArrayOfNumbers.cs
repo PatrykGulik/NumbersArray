@@ -1,4 +1,5 @@
 ﻿using System;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 public class ArrayOfNumbers
 {
@@ -91,5 +92,23 @@ public class ArrayOfNumbers
     public override string ToString()
     {
         return string.Join(" ", _array);
+    }
+
+    public int[] Scalar(int multiplier)
+    {
+        for (int i = 0; i < _array.Length; i++)
+        {
+            _array[i] = _array[i] * multiplier;
+        }
+        return _array;
+    }
+
+    public int[] AddConstant(int constant)
+    {
+        for (int i = 0; i < _array.Length; i++)
+        {
+            _array[i] = _array[i] + constant;
+        }
+        return _array;
     }
 }

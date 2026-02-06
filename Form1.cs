@@ -18,6 +18,9 @@ namespace NumbersArray
         private int inputGCDIndex1;
         private int inputGCDIndex2;
 
+        private int inputScale;
+        private int inputConstant;
+
         private int arrayValue;
 
 
@@ -103,6 +106,18 @@ namespace NumbersArray
         private void Btn_ShowArray_Click(object sender, EventArgs e)
         {
             Lbl_Array.Text = arrayOfNumbers.ToString();
+        }
+
+        private void Btn_Scale_Click(object sender, EventArgs e)
+        {
+            int.TryParse(Txt_Scale.Text, out inputScale);
+            Lbl_Scale.Text = string.Join(" ", arrayOfNumbers.Scalar(inputScale));
+        }
+
+        private void Btn_Add_Click(object sender, EventArgs e)
+        {
+            int.TryParse(Txt_Constant.Text, out inputConstant);
+            Lbl_Constant.Text = string.Join(" ", arrayOfNumbers.AddConstant(inputConstant));
         }
     }
 }

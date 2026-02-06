@@ -74,6 +74,16 @@
             Txt_GCD1 = new TextBox();
             Btn_GCD = new Button();
             label11 = new Label();
+            groupBox10 = new GroupBox();
+            Lbl_Scale = new Label();
+            Txt_Scale = new TextBox();
+            Btn_Scale = new Button();
+            label12 = new Label();
+            groupBox11 = new GroupBox();
+            Lbl_Constant = new Label();
+            Txt_Constant = new TextBox();
+            Btn_Add = new Button();
+            label10 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -83,6 +93,8 @@
             groupBox7.SuspendLayout();
             groupBox8.SuspendLayout();
             groupBox9.SuspendLayout();
+            groupBox10.SuspendLayout();
+            groupBox11.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -139,7 +151,7 @@
             groupBox1.Controls.Add(Lbl_ArraySize);
             groupBox1.Controls.Add(Btn_ArraySize);
             groupBox1.Controls.Add(label2);
-            groupBox1.Location = new Point(40, 203);
+            groupBox1.Location = new Point(40, 188);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(181, 126);
             groupBox1.TabIndex = 8;
@@ -179,7 +191,7 @@
             groupBox2.Controls.Add(Txt_AddIndex);
             groupBox2.Controls.Add(Btn_AddInt);
             groupBox2.Controls.Add(Lbl_EnterArray);
-            groupBox2.Location = new Point(277, 50);
+            groupBox2.Location = new Point(277, 35);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(200, 140);
             groupBox2.TabIndex = 9;
@@ -225,7 +237,7 @@
             groupBox3.Controls.Add(Btn_AddArray);
             groupBox3.Controls.Add(Txt_AddArray);
             groupBox3.Controls.Add(label4);
-            groupBox3.Location = new Point(40, 50);
+            groupBox3.Location = new Point(40, 35);
             groupBox3.Name = "groupBox3";
             groupBox3.Size = new Size(200, 140);
             groupBox3.TabIndex = 10;
@@ -281,7 +293,7 @@
             // 
             groupBox4.Controls.Add(Lbl_FindMax);
             groupBox4.Controls.Add(button1);
-            groupBox4.Location = new Point(277, 196);
+            groupBox4.Location = new Point(277, 181);
             groupBox4.Name = "groupBox4";
             groupBox4.Size = new Size(155, 57);
             groupBox4.TabIndex = 11;
@@ -311,7 +323,7 @@
             // 
             groupBox5.Controls.Add(Lbl_CountElements);
             groupBox5.Controls.Add(Btn_CountElements);
-            groupBox5.Location = new Point(277, 262);
+            groupBox5.Location = new Point(277, 247);
             groupBox5.Name = "groupBox5";
             groupBox5.Size = new Size(155, 57);
             groupBox5.TabIndex = 12;
@@ -341,7 +353,7 @@
             // 
             groupBox6.Controls.Add(Lbl_Sum);
             groupBox6.Controls.Add(Btn_Sum);
-            groupBox6.Location = new Point(277, 325);
+            groupBox6.Location = new Point(277, 310);
             groupBox6.Name = "groupBox6";
             groupBox6.Size = new Size(155, 57);
             groupBox6.TabIndex = 13;
@@ -371,7 +383,7 @@
             // 
             groupBox7.Controls.Add(Lbl_Avg);
             groupBox7.Controls.Add(Btn_Avg);
-            groupBox7.Location = new Point(277, 388);
+            groupBox7.Location = new Point(277, 373);
             groupBox7.Name = "groupBox7";
             groupBox7.Size = new Size(155, 57);
             groupBox7.TabIndex = 14;
@@ -405,7 +417,7 @@
             groupBox8.Controls.Add(Txt_EqualIndex1);
             groupBox8.Controls.Add(Btn_Equal);
             groupBox8.Controls.Add(label9);
-            groupBox8.Location = new Point(531, 50);
+            groupBox8.Location = new Point(531, 35);
             groupBox8.Name = "groupBox8";
             groupBox8.Size = new Size(200, 108);
             groupBox8.TabIndex = 11;
@@ -471,7 +483,7 @@
             groupBox9.Controls.Add(Txt_GCD1);
             groupBox9.Controls.Add(Btn_GCD);
             groupBox9.Controls.Add(label11);
-            groupBox9.Location = new Point(531, 170);
+            groupBox9.Location = new Point(531, 149);
             groupBox9.Name = "groupBox9";
             groupBox9.Size = new Size(200, 108);
             groupBox9.TabIndex = 13;
@@ -529,11 +541,109 @@
             label11.TabIndex = 5;
             label11.Text = "Enter Index 1";
             // 
+            // groupBox10
+            // 
+            groupBox10.Controls.Add(Lbl_Scale);
+            groupBox10.Controls.Add(Txt_Scale);
+            groupBox10.Controls.Add(Btn_Scale);
+            groupBox10.Controls.Add(label12);
+            groupBox10.Location = new Point(531, 263);
+            groupBox10.Name = "groupBox10";
+            groupBox10.Size = new Size(200, 91);
+            groupBox10.TabIndex = 14;
+            groupBox10.TabStop = false;
+            groupBox10.Text = "Scalar";
+            // 
+            // Lbl_Scale
+            // 
+            Lbl_Scale.AutoSize = true;
+            Lbl_Scale.Location = new Point(6, 69);
+            Lbl_Scale.Name = "Lbl_Scale";
+            Lbl_Scale.Size = new Size(38, 15);
+            Lbl_Scale.TabIndex = 10;
+            Lbl_Scale.Text = "label4";
+            // 
+            // Txt_Scale
+            // 
+            Txt_Scale.Location = new Point(100, 22);
+            Txt_Scale.Name = "Txt_Scale";
+            Txt_Scale.Size = new Size(94, 23);
+            Txt_Scale.TabIndex = 0;
+            // 
+            // Btn_Scale
+            // 
+            Btn_Scale.Location = new Point(5, 43);
+            Btn_Scale.Name = "Btn_Scale";
+            Btn_Scale.Size = new Size(75, 23);
+            Btn_Scale.TabIndex = 7;
+            Btn_Scale.Text = "Scale";
+            Btn_Scale.UseVisualStyleBackColor = true;
+            Btn_Scale.Click += Btn_Scale_Click;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(6, 25);
+            label12.Name = "label12";
+            label12.Size = new Size(88, 15);
+            label12.TabIndex = 5;
+            label12.Text = "Enter Multiplier";
+            // 
+            // groupBox11
+            // 
+            groupBox11.Controls.Add(Lbl_Constant);
+            groupBox11.Controls.Add(Txt_Constant);
+            groupBox11.Controls.Add(Btn_Add);
+            groupBox11.Controls.Add(label10);
+            groupBox11.Location = new Point(531, 360);
+            groupBox11.Name = "groupBox11";
+            groupBox11.Size = new Size(200, 100);
+            groupBox11.TabIndex = 15;
+            groupBox11.TabStop = false;
+            groupBox11.Text = "Add Constant";
+            // 
+            // Lbl_Constant
+            // 
+            Lbl_Constant.AutoSize = true;
+            Lbl_Constant.Location = new Point(6, 76);
+            Lbl_Constant.Name = "Lbl_Constant";
+            Lbl_Constant.Size = new Size(38, 15);
+            Lbl_Constant.TabIndex = 10;
+            Lbl_Constant.Text = "label4";
+            // 
+            // Txt_Constant
+            // 
+            Txt_Constant.Location = new Point(100, 22);
+            Txt_Constant.Name = "Txt_Constant";
+            Txt_Constant.Size = new Size(94, 23);
+            Txt_Constant.TabIndex = 0;
+            // 
+            // Btn_Add
+            // 
+            Btn_Add.Location = new Point(5, 43);
+            Btn_Add.Name = "Btn_Add";
+            Btn_Add.Size = new Size(75, 23);
+            Btn_Add.TabIndex = 7;
+            Btn_Add.Text = "Add";
+            Btn_Add.UseVisualStyleBackColor = true;
+            Btn_Add.Click += Btn_Add_Click;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(6, 25);
+            label10.Name = "label10";
+            label10.Size = new Size(85, 15);
+            label10.TabIndex = 5;
+            label10.Text = "Enter Constant";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 465);
+            Controls.Add(groupBox11);
+            Controls.Add(groupBox10);
             Controls.Add(groupBox9);
             Controls.Add(groupBox8);
             Controls.Add(groupBox7);
@@ -564,6 +674,10 @@
             groupBox8.PerformLayout();
             groupBox9.ResumeLayout(false);
             groupBox9.PerformLayout();
+            groupBox10.ResumeLayout(false);
+            groupBox10.PerformLayout();
+            groupBox11.ResumeLayout(false);
+            groupBox11.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -617,5 +731,15 @@
         private Button Btn_GCD;
         private Label label11;
         private Button Btn_ShowArray;
+        private GroupBox groupBox10;
+        private Label Lbl_Scale;
+        private TextBox Txt_Scale;
+        private Button Btn_Scale;
+        private Label label12;
+        private GroupBox groupBox11;
+        private Label Lbl_Constant;
+        private TextBox Txt_Constant;
+        private Button Btn_Add;
+        private Label label10;
     }
 }
