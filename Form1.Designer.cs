@@ -43,11 +43,10 @@
             label3 = new Label();
             Txt_AddIndex = new TextBox();
             groupBox3 = new GroupBox();
-            label5 = new Label();
-            Lbl_Array = new Label();
             Btn_AddArray = new Button();
             Txt_AddArray = new TextBox();
             label4 = new Label();
+            Lbl_Array = new Label();
             groupBox4 = new GroupBox();
             Lbl_FindMax = new Label();
             button1 = new Button();
@@ -74,6 +73,7 @@
             Txt_GCD1 = new TextBox();
             Btn_GCD = new Button();
             label11 = new Label();
+            Btn_ShowArray = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -220,8 +220,8 @@
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(label5);
             groupBox3.Controls.Add(Lbl_Array);
+            groupBox3.Controls.Add(Btn_ShowArray);
             groupBox3.Controls.Add(Btn_AddArray);
             groupBox3.Controls.Add(Txt_AddArray);
             groupBox3.Controls.Add(label4);
@@ -231,24 +231,6 @@
             groupBox3.TabIndex = 10;
             groupBox3.TabStop = false;
             groupBox3.Text = "Array Elements";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(6, 93);
-            label5.Name = "label5";
-            label5.Size = new Size(78, 15);
-            label5.TabIndex = 12;
-            label5.Text = "Original array";
-            // 
-            // Lbl_Array
-            // 
-            Lbl_Array.AutoSize = true;
-            Lbl_Array.Location = new Point(6, 115);
-            Lbl_Array.Name = "Lbl_Array";
-            Lbl_Array.Size = new Size(38, 15);
-            Lbl_Array.TabIndex = 11;
-            Lbl_Array.Text = "label5";
             // 
             // Btn_AddArray
             // 
@@ -275,6 +257,15 @@
             label4.Size = new Size(63, 15);
             label4.TabIndex = 0;
             label4.Text = "Enter array";
+            // 
+            // Lbl_Array
+            // 
+            Lbl_Array.AutoSize = true;
+            Lbl_Array.Location = new Point(11, 89);
+            Lbl_Array.Name = "Lbl_Array";
+            Lbl_Array.Size = new Size(38, 15);
+            Lbl_Array.TabIndex = 11;
+            Lbl_Array.Text = "label5";
             // 
             // groupBox4
             // 
@@ -528,6 +519,16 @@
             label11.TabIndex = 5;
             label11.Text = "Enter Index 1";
             // 
+            // Btn_ShowArray
+            // 
+            Btn_ShowArray.Location = new Point(6, 107);
+            Btn_ShowArray.Name = "Btn_ShowArray";
+            Btn_ShowArray.Size = new Size(75, 23);
+            Btn_ShowArray.TabIndex = 15;
+            Btn_ShowArray.Text = "Show Array";
+            Btn_ShowArray.UseVisualStyleBackColor = true;
+            Btn_ShowArray.Click += Btn_ShowArray_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -586,7 +587,6 @@
         private TextBox Txt_AddArray;
         private Label label4;
         private Label Lbl_Array;
-        private Label label5;
         private Label Lbl_ArraySize;
         private TextBox Txt_Index;
         private Label label6;
@@ -616,5 +616,6 @@
         private TextBox Txt_GCD1;
         private Button Btn_GCD;
         private Label label11;
+        private Button Btn_ShowArray;
     }
 }

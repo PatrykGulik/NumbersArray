@@ -87,4 +87,9 @@ public class ArrayOfNumbers
                 b = b - a; // If b is greater than a, then b becomes result of b - a
         }return a;
     }
+
+    public override string ToString()
+    {
+        return string.Join(" ", _array);
+    }
 }

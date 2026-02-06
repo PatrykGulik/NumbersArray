@@ -37,7 +37,6 @@ namespace NumbersArray
             string input = Txt_AddArray.Text;
             int[] numbers = ParseInputToArray(input);
             arrayOfNumbers = new ArrayOfNumbers(numbers);
-            Lbl_Array.Text = string.Join(" ", arrayOfNumbers.Array);
         }
 
         private void Btn_AddInt_Click(object sender, EventArgs e)
@@ -99,6 +98,11 @@ namespace NumbersArray
             int.TryParse(Txt_GCD2.Text, out inputGCDIndex2);
 
             Lbl_GCD.Text = arrayOfNumbers.EuclidAlgorithm(inputGCDIndex1, inputGCDIndex2).ToString();
+        }
+
+        private void Btn_ShowArray_Click(object sender, EventArgs e)
+        {
+            Lbl_Array.Text = arrayOfNumbers.ToString();
         }
     }
 }
