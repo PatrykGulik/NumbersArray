@@ -68,6 +68,16 @@ namespace NumbersArray
         {
             Lbl_CountElements.Text = arrayOfNumbers.ArraySize.ToString();
         }
+
+        private void Btn_Sum_Click(object sender, EventArgs e)
+        {
+            Lbl_Sum.Text = arrayOfNumbers.SumArray().ToString();
+        }
+
+        private void Btn_Avg_Click(object sender, EventArgs e)
+        {
+            Lbl_Avg.Text = arrayOfNumbers.AvgArray().ToString();
+        }
     }
 }
 

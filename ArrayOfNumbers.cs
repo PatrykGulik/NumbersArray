@@ -51,4 +51,13 @@ public class ArrayOfNumbers
         return _array.Max();
     }
 
+    public int SumArray()
+    {
+        return _array.Sum();
+    }
+
+    public int AvgArray()
+    {
+        return SumArray() / _array.Length;
+    }
 }

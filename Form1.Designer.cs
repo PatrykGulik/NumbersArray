@@ -54,11 +54,19 @@
             groupBox5 = new GroupBox();
             Lbl_CountElements = new Label();
             Btn_CountElements = new Button();
+            groupBox6 = new GroupBox();
+            Lbl_Sum = new Label();
+            Btn_Sum = new Button();
+            groupBox7 = new GroupBox();
+            Lbl_Avg = new Label();
+            Btn_Avg = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox4.SuspendLayout();
             groupBox5.SuspendLayout();
+            groupBox6.SuspendLayout();
+            groupBox7.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -256,7 +264,7 @@
             // 
             groupBox4.Controls.Add(Lbl_FindMax);
             groupBox4.Controls.Add(button1);
-            groupBox4.Location = new Point(251, 206);
+            groupBox4.Location = new Point(277, 196);
             groupBox4.Name = "groupBox4";
             groupBox4.Size = new Size(155, 57);
             groupBox4.TabIndex = 11;
@@ -286,7 +294,7 @@
             // 
             groupBox5.Controls.Add(Lbl_CountElements);
             groupBox5.Controls.Add(Btn_CountElements);
-            groupBox5.Location = new Point(251, 289);
+            groupBox5.Location = new Point(277, 262);
             groupBox5.Name = "groupBox5";
             groupBox5.Size = new Size(155, 57);
             groupBox5.TabIndex = 12;
@@ -312,11 +320,73 @@
             Btn_CountElements.UseVisualStyleBackColor = true;
             Btn_CountElements.Click += Btn_CountElements_Click;
             // 
+            // groupBox6
+            // 
+            groupBox6.Controls.Add(Lbl_Sum);
+            groupBox6.Controls.Add(Btn_Sum);
+            groupBox6.Location = new Point(277, 325);
+            groupBox6.Name = "groupBox6";
+            groupBox6.Size = new Size(155, 57);
+            groupBox6.TabIndex = 13;
+            groupBox6.TabStop = false;
+            groupBox6.Text = "Sum of All Elements";
+            // 
+            // Lbl_Sum
+            // 
+            Lbl_Sum.AutoSize = true;
+            Lbl_Sum.Location = new Point(103, 29);
+            Lbl_Sum.Name = "Lbl_Sum";
+            Lbl_Sum.Size = new Size(38, 15);
+            Lbl_Sum.TabIndex = 1;
+            Lbl_Sum.Text = "label7";
+            // 
+            // Btn_Sum
+            // 
+            Btn_Sum.Location = new Point(6, 25);
+            Btn_Sum.Name = "Btn_Sum";
+            Btn_Sum.Size = new Size(75, 23);
+            Btn_Sum.TabIndex = 0;
+            Btn_Sum.Text = "Find";
+            Btn_Sum.UseVisualStyleBackColor = true;
+            Btn_Sum.Click += Btn_Sum_Click;
+            // 
+            // groupBox7
+            // 
+            groupBox7.Controls.Add(Lbl_Avg);
+            groupBox7.Controls.Add(Btn_Avg);
+            groupBox7.Location = new Point(277, 388);
+            groupBox7.Name = "groupBox7";
+            groupBox7.Size = new Size(155, 57);
+            groupBox7.TabIndex = 14;
+            groupBox7.TabStop = false;
+            groupBox7.Text = "Average";
+            // 
+            // Lbl_Avg
+            // 
+            Lbl_Avg.AutoSize = true;
+            Lbl_Avg.Location = new Point(103, 29);
+            Lbl_Avg.Name = "Lbl_Avg";
+            Lbl_Avg.Size = new Size(38, 15);
+            Lbl_Avg.TabIndex = 1;
+            Lbl_Avg.Text = "label7";
+            // 
+            // Btn_Avg
+            // 
+            Btn_Avg.Location = new Point(6, 25);
+            Btn_Avg.Name = "Btn_Avg";
+            Btn_Avg.Size = new Size(75, 23);
+            Btn_Avg.TabIndex = 0;
+            Btn_Avg.Text = "Find";
+            Btn_Avg.UseVisualStyleBackColor = true;
+            Btn_Avg.Click += Btn_Avg_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(groupBox7);
+            Controls.Add(groupBox6);
             Controls.Add(groupBox5);
             Controls.Add(groupBox4);
             Controls.Add(groupBox3);
@@ -335,6 +405,10 @@
             groupBox4.PerformLayout();
             groupBox5.ResumeLayout(false);
             groupBox5.PerformLayout();
+            groupBox6.ResumeLayout(false);
+            groupBox6.PerformLayout();
+            groupBox7.ResumeLayout(false);
+            groupBox7.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -368,5 +442,11 @@
         private GroupBox groupBox5;
         private Label Lbl_CountElements;
         private Button Btn_CountElements;
+        private GroupBox groupBox6;
+        private Label Lbl_Sum;
+        private Button Btn_Sum;
+        private GroupBox groupBox7;
+        private Label Lbl_Avg;
+        private Button Btn_Avg;
     }
 }
