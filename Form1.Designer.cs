@@ -34,6 +34,8 @@
             Lbl_EnterArray = new Label();
             Btn_AddInt = new Button();
             groupBox1 = new GroupBox();
+            Txt_Index = new TextBox();
+            label6 = new Label();
             Lbl_ArraySize = new Label();
             groupBox2 = new GroupBox();
             Lbl_ArrayElements = new Label();
@@ -46,11 +48,13 @@
             Btn_AddArray = new Button();
             Txt_AddArray = new TextBox();
             label4 = new Label();
-            label6 = new Label();
-            Txt_Index = new TextBox();
+            groupBox4 = new GroupBox();
+            button1 = new Button();
+            Lbl_FindMax = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
+            groupBox4.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -113,6 +117,22 @@
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
             groupBox1.Text = "Array Index Value";
+            // 
+            // Txt_Index
+            // 
+            Txt_Index.Location = new Point(52, 25);
+            Txt_Index.Name = "Txt_Index";
+            Txt_Index.Size = new Size(100, 23);
+            Txt_Index.TabIndex = 6;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(11, 28);
+            label6.Name = "label6";
+            label6.Size = new Size(35, 15);
+            label6.TabIndex = 5;
+            label6.Text = "Index";
             // 
             // Lbl_ArraySize
             // 
@@ -228,27 +248,42 @@
             label4.TabIndex = 0;
             label4.Text = "Enter array";
             // 
-            // label6
+            // groupBox4
             // 
-            label6.AutoSize = true;
-            label6.Location = new Point(11, 28);
-            label6.Name = "label6";
-            label6.Size = new Size(35, 15);
-            label6.TabIndex = 5;
-            label6.Text = "Index";
+            groupBox4.Controls.Add(Lbl_FindMax);
+            groupBox4.Controls.Add(button1);
+            groupBox4.Location = new Point(251, 206);
+            groupBox4.Name = "groupBox4";
+            groupBox4.Size = new Size(155, 57);
+            groupBox4.TabIndex = 11;
+            groupBox4.TabStop = false;
+            groupBox4.Text = "Highest Value";
             // 
-            // Txt_Index
+            // button1
             // 
-            Txt_Index.Location = new Point(52, 25);
-            Txt_Index.Name = "Txt_Index";
-            Txt_Index.Size = new Size(100, 23);
-            Txt_Index.TabIndex = 6;
+            button1.Location = new Point(6, 25);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 0;
+            button1.Text = "Find";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // Lbl_FindMax
+            // 
+            Lbl_FindMax.AutoSize = true;
+            Lbl_FindMax.Location = new Point(103, 29);
+            Lbl_FindMax.Name = "Lbl_FindMax";
+            Lbl_FindMax.Size = new Size(38, 15);
+            Lbl_FindMax.TabIndex = 1;
+            Lbl_FindMax.Text = "label7";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(groupBox4);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
@@ -261,6 +296,8 @@
             groupBox2.PerformLayout();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
+            groupBox4.ResumeLayout(false);
+            groupBox4.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -288,5 +325,8 @@
         private Label Lbl_ArraySize;
         private TextBox Txt_Index;
         private Label label6;
+        private GroupBox groupBox4;
+        private Label Lbl_FindMax;
+        private Button button1;
     }
 }

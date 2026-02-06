@@ -46,4 +46,9 @@ public class ArrayOfNumbers
         _array[index] = value;
     }
 
+    public int FindMax()
+    {
+        return _array.Max();
+    }
+
 }

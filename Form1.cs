@@ -49,14 +49,19 @@ namespace NumbersArray
             string[] parts = input.Split(' ');
             List<int> numbers = new List<int>();
 
-            foreach (string part in parts) 
-            { 
-                 if (!string.IsNullOrWhiteSpace(part))
-                 {
-                        numbers.Add(int.Parse(part));
-                 }
+            foreach (string part in parts)
+            {
+                if (!string.IsNullOrWhiteSpace(part))
+                {
+                    numbers.Add(int.Parse(part));
+                }
             }
             return numbers.ToArray();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Lbl_FindMax.Text = arrayOfNumbers.FindMax().ToString();
         }
     }
 }
