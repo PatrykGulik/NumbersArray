@@ -3,12 +3,13 @@
 public class ArrayOfNumbers
 {
 
-	private int[] _array;
+    public int[] Array {get; set;}
+
 
 	//Constructors
 	public ArrayOfNumbers(int sizeOfArray)
 	{
-		_array = new int[sizeOfArray];
+        Array = new int[sizeOfArray];
 	}
 
 	public ArrayOfNumbers(int[] array)
