@@ -1,16 +1,21 @@
 using System;
-
+/*
+ * Patryk Gulik
+ * 11002010
+ * Class: Form1
+ * Calls methods on interaction with UI elements
+ */
 namespace NumbersArray
 {
     public partial class Form1 : Form
     {
-
+        // Fields
         private ArrayOfNumbers arrayOfNumbers;
 
-        private int arraySize;
+        private int index;
 
         private int arrayIndex;
-        private int index;
+        private int arrayValue;
 
         private int inputEqualIndex1;
         private int inputEqualIndex2;
@@ -21,7 +26,6 @@ namespace NumbersArray
         private int inputScale;
         private int inputConstant;
 
-        private int arrayValue;
 
 
         public Form1()
@@ -29,12 +33,7 @@ namespace NumbersArray
             InitializeComponent();
         }
 
-        private void Btn_ArraySize_Click(object sender, EventArgs e)
-        {
-            int.TryParse(Txt_Index.Text, out index);
-            Lbl_ArraySize.Text = arrayOfNumbers.FindValueAtIndex(index).ToString();
-
-        }
+        // Fills the array and instantiates the object
         private void Btn_AddArray_Click_1(object sender, EventArgs e)
         {
             string input = Txt_AddArray.Text;
@@ -42,6 +41,15 @@ namespace NumbersArray
             arrayOfNumbers = new ArrayOfNumbers(numbers);
         }
 
+        // Displays array element at a specific index
+        private void Btn_ArraySize_Click(object sender, EventArgs e)
+        {
+            int.TryParse(Txt_Index.Text, out index);
+            Lbl_ArraySize.Text = arrayOfNumbers.FindValueAtIndex(index).ToString();
+
+        }
+
+        // Sets an element at specified index to a given value
         private void Btn_AddInt_Click(object sender, EventArgs e)
         {
 
@@ -52,6 +60,7 @@ namespace NumbersArray
 
         }
 
+        // Parses TextBox input into an array of numbers
         public int[] ParseInputToArray(string input)
         {
             string[] parts = input.Split(' ');
@@ -67,26 +76,31 @@ namespace NumbersArray
             return numbers.ToArray();
         }
 
+        // Finds the highest number in an array
         private void button1_Click(object sender, EventArgs e)
         {
             Lbl_FindMax.Text = arrayOfNumbers.FindMax().ToString();
         }
 
+        // Counts all elements in an array
         private void Btn_CountElements_Click(object sender, EventArgs e)
         {
             Lbl_CountElements.Text = arrayOfNumbers.ArraySize.ToString();
         }
 
+        // Sums all values in the array
         private void Btn_Sum_Click(object sender, EventArgs e)
         {
             Lbl_Sum.Text = arrayOfNumbers.SumArray().ToString();
         }
 
+        // Calculates the average number in the array
         private void Btn_Avg_Click(object sender, EventArgs e)
         {
             Lbl_Avg.Text = arrayOfNumbers.AvgArray().ToString();
         }
 
+        // Checks if values at two indices are equal
         private void Btn_Equal_Click(object sender, EventArgs e)
         {
             int.TryParse(Txt_EqualIndex1.Text, out inputEqualIndex1);
@@ -95,6 +109,7 @@ namespace NumbersArray
             Lbl_Equal.Text = arrayOfNumbers.Equal(inputEqualIndex1, inputEqualIndex2).ToString();
         }
 
+        // Calculates the GCD
         private void Btn_GCD_Click(object sender, EventArgs e)
         {
             int.TryParse(Txt_GCD1.Text, out inputGCDIndex1);
@@ -102,18 +117,21 @@ namespace NumbersArray
 
             Lbl_GCD.Text = arrayOfNumbers.EuclidAlgorithm(inputGCDIndex1, inputGCDIndex2).ToString();
         }
-
+        
+        // Returns the formatted array as string
         private void Btn_ShowArray_Click(object sender, EventArgs e)
         {
             Lbl_Array.Text = arrayOfNumbers.ToString();
         }
 
+        // Multiplies each element by a given multiplier
         private void Btn_Scale_Click(object sender, EventArgs e)
         {
             int.TryParse(Txt_Scale.Text, out inputScale);
             Lbl_Scale.Text = string.Join(" ", arrayOfNumbers.Scalar(inputScale));
         }
 
+        // Adds a constant to each array element
         private void Btn_Add_Click(object sender, EventArgs e)
         {
             int.TryParse(Txt_Constant.Text, out inputConstant);
@@ -122,4 +140,3 @@ namespace NumbersArray
     }
 }
 
-//string.Join(" ", arrayOfNumbers.Array);
